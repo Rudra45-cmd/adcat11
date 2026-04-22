@@ -362,6 +362,39 @@ footer {
   display: grid;
   place-items: center;
   padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-bg {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.14), transparent 32%),
+    radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.15), transparent 34%),
+    var(--bg-gradient);
+}
+
+.auth-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(35px);
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.orb-a {
+  width: 260px;
+  height: 260px;
+  background: #60a5fa;
+  top: 50px;
+  left: -90px;
+}
+
+.orb-b {
+  width: 280px;
+  height: 280px;
+  background: #818cf8;
+  right: -110px;
+  bottom: -50px;
 }
 
 .auth-container {
@@ -371,6 +404,9 @@ footer {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  position: relative;
+  z-index: 2;
 }
 
 .auth-left {
@@ -409,7 +445,7 @@ footer {
 
 .auth-right {
   flex: 1.1;
-  background: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(238, 242, 255, 0.82));
 }
 
 .glass-form {
@@ -417,6 +453,11 @@ footer {
   backdrop-filter: blur(18px);
   padding: 2.5rem;
   height: 100%;
+}
+
+.glass-form-strong {
+  border-left: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 .form-head h2 {
@@ -493,6 +534,34 @@ input[type='text']:focus {
   margin-top: 0.9rem;
   text-align: center;
   font-size: 0.95rem;
+}
+
+.auth-left-mini {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.auth-left-mini h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.55rem;
+}
+
+.auth-left-mini ul {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  color: #e0e7ff;
+  font-size: 0.9rem;
+}
+
+.auth-left-mini li::before {
+  content: '✓';
+  margin-right: 0.4rem;
+  color: #bfdbfe;
 }
 
 .checkbox {
