@@ -3,48 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdCat — AI Ad Generation Platform</title>
+    <title>AdCat — AI Ad Platform</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="shot-home">
-      <span class="shot-blob sb1" aria-hidden="true"></span>
-      <span class="shot-blob sb2" aria-hidden="true"></span>
-      <span class="shot-blob sb3" aria-hidden="true"></span>
-      <span class="shot-blob sb4" aria-hidden="true"></span>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="blob pink"></span>
+      <span class="blob blue"></span>
+      <span class="blob purple"></span>
+      <span class="blob pink b4"></span>
+    </div>
 
-      <section class="shot-wrapper fade-in">
-        <article class="shot-glass">
-          <header class="shot-topbar">
-            <a href="index.html" class="logo">Ad<span>Cat</span></a>
+    <main class="site-shell">
+      <section class="container hero fade-in">
+        <article class="hero-glass">
+          <header class="hero-nav">
+            <a class="logo" href="index.html">Ad<span>Cat</span></a>
             <nav>
-              <a href="#work">Work</a>
-              <a href="#about">About</a>
-              <a href="login.html">Log in</a>
-              <a href="signup.html">Sign up</a>
+              <a href="#features">Features</a>
+              <a href="#how">How it works</a>
+              <a href="login.html">Login</a>
+              <a href="signup.html">Signup</a>
             </nav>
           </header>
 
-          <div class="shot-content">
-            <span class="shot-tag">Premium AI Ad Suite</span>
+          <div class="hero-content">
+            <span class="badge">AI Powered</span>
             <h1>
-              GLASS
-              <span>MORPHISM</span>
+              Create High-Converting Ads with
+              <span class="gradient-text">AI</span>
             </h1>
             <p>
-              Build high-converting ad creatives with a calm, elegant workspace. AdCat combines strategy, copy generation, and visual testing in one place.
+              AdCat helps modern teams generate, test, and optimize ad creatives from one premium workspace. Launch campaigns faster with confidence.
             </p>
-
-            <div class="shot-actions">
-              <a href="signup.html" class="btn btn-primary">Get Started</a>
-              <a href="login.html" class="btn btn-outline">View Studio</a>
+            <div class="hero-actions">
+              <a href="signup.html" class="btn btn-glass btn-primary">Start Free</a>
+              <a href="#features" class="btn btn-glass btn-outline">See Features</a>
             </div>
           </div>
 
-          <div class="shot-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
+          <div class="slider-dots" aria-hidden="true">
+            <span class="active"></span><span></span><span></span>
           </div>
         </article>
+      </section>
+
+      <section class="container section" id="features">
+        <div class="section-head">
+          <h2>Built for performance-focused teams</h2>
+          <p>Clean tools for high-impact ad creation without the noise.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>AI Creative Engine</h3>
+            <p>Generate hooks, headlines, and full ad copy in seconds with your brand tone preserved.</p>
+          </article>
+          <article class="card">
+            <h3>Conversion Insights</h3>
+            <p>Track what converts and get actionable suggestions to scale winners faster.</p>
+          </article>
+          <article class="card">
+            <h3>Team Workflow</h3>
+            <p>Collaborate, review, and ship campaigns in one elegant workspace.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section" id="how">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Simple, fast, and built for velocity.</p>
+        </div>
+        <div class="grid-3 steps">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Describe your product</h3>
+            <p>Drop your offer details and target audience.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Generate ad variants</h3>
+            <p>Get multiple ad concepts crafted by AI in one click.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Optimize and scale</h3>
+            <p>Use feedback loops to improve performance over time.</p>
+          </article>
+        </div>
       </section>
     </main>
 
