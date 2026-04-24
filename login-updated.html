@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - AdCat AI</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="assets/css/tailwind-custom.css">
+<link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    button:active { transform: scale(0.96); }
+    .left-shapes { position: absolute; inset: 0; overflow: hidden; }
+    .shape { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.1); animation: float 8s ease-in-out infinite; }
+    .shape1 { width: 200px; height: 200px; top: 20%; left: 10%; animation-delay: 0s; }
+    .shape2 { width: 150px; height: 150px; top: 60%; right: 20%; animation-delay: 2s; }
+    .shape3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 4s; }
+  </style>
+</head>
+<body class="font-inter antialiased min-h-screen" style="background: linear-gradient(to bottom right, #111827, #1f2937); overflow-hidden;">
+
+  <div class="min-h-screen flex items-center justify-center px-4 py-12">
+    <div class="auth-container auth-slide-in max-w-[920px] mx-auto">
+      <!-- Left Panel - Premium Visual -->
+      <div class="auth-left-panel relative">
+        <!-- Abstract shapes -->
+        <div class="left-shapes">
+          <div class="shape shape1 animate-float"></div>
+          <div class="shape shape2 animate-float"></div>
+          <div class="shape shape3 animate-float"></div>
+        </div>
+        <!-- Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-8 z-10">
+          <div class="text-center max-w-sm">
+            <i class="fas fa-brain text-6xl mb-6 opacity-90"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">AdCat AI</h2>
+            <p class="text-white/90 text-lg leading-relaxed drop-shadow-md">Build ads faster with AI</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Panel - Glass Form -->
+      <div class="auth-right-panel">
+        <div class="mb-10 text-center">
+          <img src="assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat AI" class="w-12 h-12 mx-auto mb-4 drop-shadow-xl">
+          <h1 class="text-4xl font-bold mb-3">Welcome Back</h1>
+          <p class="text-gray-300 text-xl opacity-90">Sign in to continue creating stunning ads</p>
+        </div>
+
+        <div class="px-10 py-10">
+          <form id="loginForm" novalidate class="space-y-6 mb-10">
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-3 text-gray-200">
+                <i class="fas fa-envelope mr-2 text-purple-400"></i>
+                Email Address
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Enter your email"
+                required
+                class="auth-input w-full transition-all duration-300"
+              >
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label for="password" class="block text-sm font-semibold mb-3 text-gray-200">
+                <i class="fas fa-lock mr-2 text-purple-400"></i>
+                Password
+              </label>
+              <div class="relative">
+                <input 
+                  type="password" 
+                  id="password" 
+                  placeholder="Enter your password"
+                  required
+                  class="auth-input w-full pr-12 transition-all duration-300"
+                >
+                <button type="button" class="toggle-pass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1 transition-all" aria-label="Toggle password">
+                  <i class="fas fa-eye text-sm"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="flex items-center justify-between text-sm">
+              <label class="flex items-center gap-2">
+                <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-500 bg-gray-800 text-purple-500 focus:ring-purple-500 focus:ring-2 transition">
+                <span class="text-gray-300 cursor-pointer select-none">Remember me</span>
+              </label>
+              <a href="#" class="text-purple-400 hover:text-white font-medium transition-all duration-200">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="purple-gradient-btn w-full text-xl font-semibold py-4 shadow-2xl mb-2 transition-all duration-300">
+              <i class="fas fa-arrow-right mr-2"></i>Sign In
+            </button>
+            <div id="login-error" class="field-meta text-center text-sm min-h-5 text-red-400 hidden"></div>
+          </form>
+
+          <!-- Divider -->
+          <div class="relative text-center my-8">
+            <div class="absolute inset-0 flex items-center">
+              <span class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></span>
+            </div>
+            <span class="relative bg-gray-900 px-6 py-2 text-sm text-gray-500">Or sign in with</span>
+          </div>
+
+          <!-- Social Login -->
+          <div class="grid grid-cols-2 gap-4 mb-10">
+            <button class="social-auth py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm">
+              <i class="fab fa-google text-red-500 text-lg"></i>
+              <span>Google</span>
+            </button>
+            <button class="social-auth py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 bg-black/20 backdrop-blur-sm">
+              <i class="fab fa-apple text-lg"></i>
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- Switch -->
+          <p class="text-center text-gray-400 text-lg">
+            Don't have an account? 
+            <a href="signup.html" class="text-purple-400 hover:text-white font-bold transition-colors">Create one</a>
+          </p>
+        </div>
+
+        <!-- Demo Footer -->
+        <div class="px-10 py-6 bg-white/10 backdrop-blur-md border-t border-white/20 rounded-b-3xl mt-6">
+          <p class="text-xs text-gray-300 text-center mb-3 font-medium">🧪 Demo Login (Any Password)</p>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <button type="button" onclick="document.getElementById('email').value='demo@adcat.ai'; document.getElementById('password').value='demo';" class="bg-purple-500/30 hover:bg-purple-500/50 text-purple-200 py-2 px-3 rounded-xl font-medium transition-all">demo@adcat.ai</button>
+            <button type="button" onclick="document.getElementById('email').value='test@example.com'; document.getElementById('password').value='test';" class="bg-purple-500/30 hover:bg-purple-500/50 text-purple-200 py-2 px-3 rounded-xl font-medium transition-all">test@example.com</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="mt-12 text-center text-xs text-gray-500 space-y-2">
+      <p>By signing in, you agree to our <a href="#" class="text-purple-400 hover:text-white">Terms of Service</a> and <a href="#" class="text-purple-400 hover:text-white">Privacy Policy</a></p>
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+  <script>
+    // Quick demo autofill
+    function autofillDemo(email) {
+      document.getElementById('email').value = email;
+      document.getElementById('password').value = 'demo';
+    }
+    // Password toggle
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.toggle-pass')) {
+        const input = e.target.closest('.relative').querySelector('input');
+        const icon = e.target.closest('.toggle-pass').querySelector('i');
+        input.type = input.type === 'password' ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+      }
+    });
+    // Auth redirect check
+    if (localStorage.getItem('token')) window.location.href = 'dashboard.html';
+  </script>
+</body>
+</html>

@@ -30,31 +30,88 @@
       box-shadow: 0 25px 60px -15px rgba(0,0,0,0.2);
       border-bottom: 1px solid rgba(255,255,255,0.2);
     }
+
+    /* Glass Hero Card */
+    .glass-hero {
+      max-width: 1100px;
+      margin: 120px auto 0;
+      padding: 40px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .glass-hero:hover {
+      transform: scale(1.01);
+    }
+    .glass-navbar {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 12px 24px;
+      margin-bottom: 32px;
+    }
+    .hero-heading {
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      color: #1e3a8a;
+      font-weight: 800;
+    }
+    .gradient-heading {
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-text {
+      color: #64748b;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
+    }
+    .btn-secondary {
+      border: 2px solid #e5e7eb;
+      color: #374151;
+    }
+    .btn-secondary:hover {
+      background: #eff6ff;
+      border-color: #3b82f6;
+    }
+    .stat-item {
+      color: #1e3a8a;
+    }
   </style>
-</head>
-<body class="font-inter antialiased bg-[radial-gradient(ellipse_at_center,#3b82f6_0%,rgba(59,130,246,0.2)_30%,rgba(99,102,241,0.1)_70%,transparent_100%)],bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 overflow-x-hidden">
+ </head>
+<body class="font-inter antialiased page-bg">
   <!-- Cinematic Floating Blobs -->
-  <div class="fixed top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-400/30 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-float hover:animate-glowPulse -z-10 shadow-2xl" style="animation-delay: 0s;"></div>
-  <div class="fixed bottom-32 left-20 w-96 h-96 bg-gradient-to-br from-indigo-400/25 to-purple-400/15 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-float -z-10 shadow-2xl" style="animation-delay: 2s;"></div>
-  <div class="fixed top-1/2 -right-10 w-64 h-64 bg-gradient-to-br from-cyan-400/40 to-emerald-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-65 animate-float hover:scale-110 -z-10 shadow-xl" style="animation-delay: 4s;"></div>
-  <div class="fixed bottom-20 left-1/4 w-48 h-48 bg-gradient-to-br from-purple-400/30 to-pink-400/20 rounded-full mix-blend-multiply filter blur-lg opacity-60 animate-float -z-10" style="animation-delay: 1s;"></div>
-  <div class="fixed top-32 left-32 w-56 h-56 bg-gradient-to-br from-cyan-400/20 to-blue-400/25 rounded-full blob-float -z-10" style="animation-delay: 3s;"></div>
-  <div class="fixed bottom-40 right-32 w-64 h-64 bg-gradient-to-br from-indigo-400/20 to-purple-400/15 rounded-full blob-float -z-10" style="animation-delay: 5s;"></div>
+  <div class="fixed top-20 right-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-[60px] opacity-15 animate-float hover:animate-glowPulse -z-10 shadow-2xl" style="background: linear-gradient(to br, #3b82f6aa, #6366f1aa); animation-delay: 0s;"></div>
+  <div class="fixed bottom-32 left-20 w-96 h-96 rounded-full mix-blend-multiply filter blur-[60px] opacity-12 animate-float -z-10 shadow-2xl" style="background: linear-gradient(to br, #6366f166, #8b5cf166); animation-delay: 2s;"></div>
+  <div class="fixed top-1/2 -right-10 w-64 h-64 rounded-full mix-blend-multiply filter blur-[60px] opacity-18 animate-float hover:scale-110 -z-10 shadow-xl" style="background: linear-gradient(to br, #06b6d466, #3b82f666); animation-delay: 4s;"></div>
+  <div class="fixed bottom-20 left-1/4 w-48 h-48 rounded-full mix-blend-multiply filter blur-[60px] opacity-2 animate-float -z-10" style="background: linear-gradient(to br, #8b5cf166, #3b82f666); animation-delay: 1s;"></div>
+  <div class="fixed top-32 left-32 w-56 h-56 rounded-full blob-float -z-10 filter blur-[60px] opacity-15" style="background: linear-gradient(to br, #06b6d433, #3b82f433); animation-delay: 3s;"></div>
+  <div class="fixed bottom-40 right-32 w-64 h-64 rounded-full blob-float -z-10 filter blur-[60px] opacity-1" style="background: linear-gradient(to br, #6366f133, #8b5cf133); animation-delay: 5s;"></div>
 
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-transparent transition-all duration-300 px-6 py-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <img src="assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat" class="w-10 h-10 rounded-xl shadow-lg">
-        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AdCat</span>
+<span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent flex items-center gap-2">
+  <i class="fas fa-cat text-xl"></i>AdCat</span>
       </a>
       
       <!-- Links -->
       <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Home</a>
         <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Features</a>
         <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Pricing</a>
-        <a href="#demo" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Demo</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Contact</a>
       </div>
       
       <!-- CTA -->
@@ -72,46 +129,47 @@
 
   <!-- Hero Section -->
   <section class="min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="hero-glass mx-auto px-6 md:grid md:grid-cols-2 md:gap-16 items-center md:max-w-none">
       <!-- Hero Content -->
       <div class="animate-fadeInUp">
+
         <div class="inline-flex items-center gap-2 bg-blue-100/80 backdrop-blur-sm px-4 py-2 rounded-full mb-8 animate-glowPulse">
           <div class="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse"></div>
-          <span class="font-semibold text-sm text-blue-800">✨ AI Powered</span>
+          <span class="font-semibold text-sm text-blue-800">AI Powered</span>
         </div>
 <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight mb-8 drop-shadow-lg bg-gradient-to-r from-transparent via-white/20 to-transparent px-3 py-1 rounded-xl inline-block [text-shadow:_0_4px_16px_rgba(59,130,246,0.4)]">
           Create <span class="gradient-text block md:inline">High-Converting</span><br class="md:hidden">
           Ads with <span class="gradient-text block md:inline">AI</span><br>
           <span class="text-6xl md:text-7xl opacity-90">in <span class="text-4xl animate-gradientShift inline-block">Seconds</span></span>
         </h1>
-<p class="text-xl text-gray-600 mb-6 max-w-lg leading-relaxed">
+<p class="hero-text text-xl mb-6 max-w-lg leading-relaxed">
           Generate stunning images, videos, and marketing copy instantly using cutting-edge AI.
           Perfect for social media, e-commerce, and campaigns.
         </p>
         <!-- Fintech Stats -->
 <div class="grid grid-cols-3 gap-8 mb-10 text-center md:text-left md:grid-cols-3">
-          <div class="stat-card">
-            <div class="text-4xl font-black gradient-text group-hover:scale-110 animate-glowPulse">10K+</div>
-            <p class="text-base font-semibold text-gray-600 mt-2">Ads Generated</p>
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">10K+</div>
+            <p class="text-lg font-semibold hero-text">Ads Generated</p>
           </div>
-          <div class="stat-card">
-            <div class="text-4xl font-black gradient-text group-hover:scale-110 animate-glowPulse">500+</div>
-            <p class="text-base font-semibold text-gray-600 mt-2">Happy Users</p>
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">500+</div>
+            <p class="text-lg font-semibold hero-text">Users</p>
           </div>
-          <div class="stat-card">
-            <div class="text-4xl font-black gradient-text group-hover:scale-110 animate-glowPulse">98%</div>
-            <p class="text-base font-semibold text-gray-600 mt-2">Success Rate</p>
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">98%</div>
+            <p class="text-lg font-semibold hero-text">Success</p>
           </div>
         </div>
         <div class="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
-        <a href="signup.html" class="w-full sm:w-auto btn-gradient glass-border ripple px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl ring-2 ring-blue-500/30 cta-glow hover:shadow-glow-xl hover:-translate-y-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 animate-scaleIn animate-glowPulse">Start Free Trial</a>
-          <a href="#demo" class="w-full sm:w-auto flex items-center gap-3 px-10 py-5 rounded-3xl font-semibold text-gray-800 border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all hover:scale-105 backdrop-blur-sm">Watch Demo <i class="fas fa-play"></i></a>
+        <a href="signup.html" class="btn-primary w-full sm:w-auto px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl animate-glowPulse">Start Free Trial</a>
+          <a href="#demo" class="btn-secondary w-full sm:w-auto flex items-center gap-3 px-10 py-5 rounded-3xl font-semibold">Watch Demo <i class="fas fa-play"></i></a>
         </div>
       </div>
       
       <!-- Hero Image -->
       <div class="relative animate-[float_8s_ease-in-out_infinite] hover:animate-glowPulse" style="animation-delay: 0.5s;">
-        <div class="relative z-10 glass-border glass-effect rounded-[3rem] p-12 shadow-2xl hero-preview-ring max-w-lg mx-auto backdrop-blur-3xl bg-white/60 border-white/40 hover:shadow-glow-xl hover:scale-[1.02] transition-all duration-1000">
+        <div class="relative z-10 rounded-3xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.15)] max-w-lg mx-auto hover:shadow-glow-xl hover:scale-102 transition-all duration-500">
           <div class="relative">
             <video class="rounded-3xl shadow-2xl w-full h-[450px] object-cover hover:scale-105 transition-transform duration-1000 group-hover:rotate-1" muted loop playsinline poster="https://images.unsplash.com/photo-1666814626241-90e7764a85b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=85">
               <source src="assets/im and video/Untitled design.mp4" type="video/mp4">
@@ -593,6 +651,7 @@
     </div>
   </footer>
 
+<script src="assets/js/animations.js"></script>
   <script>
     // Navbar scroll effect
     let lastScrollY = 0;
@@ -645,4 +704,5 @@
     document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>

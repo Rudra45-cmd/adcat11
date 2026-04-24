@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - AdCat AI</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="assets/css/tailwind-custom.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    button:active { transform: scale(0.96); }
+    .left-shapes { position: absolute; inset: 0; overflow: hidden; }
+    .shape { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.1); animation: float 8s ease-in-out infinite; }
+    .shape1 { width: 200px; height: 200px; top: 20%; left: 10%; animation-delay: 0s; }
+    .shape2 { width: 150px; height: 150px; top: 60%; right: 20%; animation-delay: 2s; }
+    .shape3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 4s; }
+  </style>
+</head>
+<body class="font-inter antialiased min-h-screen page-bg overflow-hidden">
+
+    <div class="min-h-screen flex items-center justify-center px-4 py-12">
+      <div class="auth-container auth-slide-in max-w-[920px] mx-auto">
+      <!-- Left Panel - Premium Visual (same as login) -->
+      <div class="auth-left-panel relative">
+        <!-- Abstract shapes -->
+        <div class="left-shapes">
+          <div class="shape shape1 animate-float"></div>
+          <div class="shape shape2 animate-float"></div>
+          <div class="shape shape3 animate-float"></div>
+        </div>
+        <!-- Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-8 z-10">
+          <div class="text-center max-w-sm">
+            <i class="fas fa-brain text-6xl mb-6 opacity-90"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">AdCat AI</h2>
+            <p class="text-white/90 text-lg leading-relaxed drop-shadow-md">Build ads faster with AI</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Panel - Glass Form -->
+      <div class="auth-right-panel">
+        <div class="mb-10 text-center">
+          <img src="assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat AI" class="w-12 h-12 mx-auto mb-4 drop-shadow-xl">
+          <h1 class="text-4xl font-bold mb-3">Create an Account</h1>
+        <p class="text-slate-600 text-xl">Start your AI ad creation journey today</p>
+        </div>
+
+        <div class="px-10 py-10">
+          <form id="signupForm" novalidate class="space-y-6 mb-8">
+            <!-- Names (2-column) -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-semibold mb-3 text-slate-700">
+                  <i class="fas fa-user mr-2 text-purple-400"></i>
+                  First Name
+                </label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  placeholder="First name"
+                  required
+                  class="auth-input w-full transition-all duration-300"
+                >
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-semibold mb-3 text-slate-700">
+                  <i class="fas fa-user mr-2 text-purple-400"></i>
+                  Last Name
+                </label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  placeholder="Last name"
+                  required
+                  class="auth-input w-full transition-all duration-300"
+                >
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-3 text-gray-200">
+                <i class="fas fa-envelope mr-2 text-purple-400"></i>
+                Email Address
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Enter your email"
+                required
+                class="auth-input w-full transition-all duration-300"
+              >
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label for="password" class="block text-sm font-semibold mb-3 text-gray-200">
+                <i class="fas fa-lock mr-2 text-purple-400"></i>
+                Password
+              </label>
+              <div class="relative">
+                <input 
+                  type="password" 
+                  id="password" 
+                  placeholder="Create password"
+                  required
+                  class="auth-input w-full pr-12 transition-all duration-300"
+                >
+                <button type="button" class="toggle-pass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1 transition-all" aria-label="Toggle password">
+                  <i class="fas fa-eye text-sm"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div>
+              <label for="confirmPassword" class="block text-sm font-semibold mb-3 text-gray-200">
+                <i class="fas fa-lock mr-2 text-purple-400"></i>
+                Confirm Password
+              </label>
+              <div class="relative">
+                <input 
+                  type="password" 
+                  id="confirmPassword" 
+                  placeholder="Confirm password"
+                  required
+                  class="auth-input w-full pr-12 transition-all duration-300"
+                >
+                <button type="button" class="toggle-pass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1 transition-all" aria-label="Toggle password">
+                  <i class="fas fa-eye text-sm"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="space-y-2">
+              <label class="flex items-start gap-3 p-3 bg-white/10 rounded-2xl backdrop-blur-sm cursor-pointer group hover:bg-white/20 transition-all">
+                <input type="checkbox" id="terms" class="w-5 h-5 mt-1 rounded border-gray-500 bg-gray-800 text-purple-500 focus:ring-purple-500 focus:ring-2 mt-0.5 flex-shrink-0 transition" required>
+                <div class="text-sm text-gray-300 leading-relaxed">
+                  I agree to the <a href="#" class="text-purple-400 hover:text-white font-semibold">Terms & Conditions</a> and <a href="#" class="text-purple-400 hover:text-white font-semibold">Privacy Policy</a>
+                </div>
+              </label>
+              <p class="text-xs text-gray-500 pl-8">Get 50 free credits on signup!</p>
+            </div>
+
+            <button type="submit" class="purple-gradient-btn w-full text-xl font-semibold py-4 shadow-2xl transition-all duration-300">
+              <i class="fas fa-user-plus mr-2"></i>Create Account
+            </button>
+            <div id="signup-error" class="field-meta text-center text-sm min-h-5 text-red-400 hidden"></div>
+          </form>
+
+          <!-- Divider -->
+          <div class="relative text-center my-8">
+            <div class="absolute inset-0 flex items-center">
+              <span class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></span>
+            </div>
+            <span class="relative bg-gray-900 px-6 py-2 text-sm text-gray-500">Or sign up with</span>
+          </div>
+
+          <!-- Social Login -->
+          <div class="grid grid-cols-2 gap-4 mb-10">
+            <button class="social-auth py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm">
+              <i class="fab fa-google text-red-500 text-lg"></i>
+              <span>Google</span>
+            </button>
+            <button class="social-auth py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 bg-black/20 backdrop-blur-sm">
+              <i class="fab fa-apple text-lg"></i>
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- Switch -->
+          <p class="text-center text-gray-400 text-lg">
+            Already have an account? 
+            <a href="login.html" class="text-purple-400 hover:text-white font-bold transition-colors">Sign in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="mt-12 text-center text-xs text-gray-500 space-y-2">
+      <p>By signing up, you agree to our <a href="#" class="text-purple-400 hover:text-white">Terms of Service</a> and <a href="#" class="text-purple-400 hover:text-white">Privacy Policy</a></p>
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+  <script>
+    // Password toggles
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.toggle-pass')) {
+        const input = e.target.closest('.relative').querySelector('input');
+        const icon = e.target.closest('.toggle-pass').querySelector('i');
+        input.type = input.type === 'password' ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+      }
+    });
+    // Form validation (password match)
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      const pwd = document.getElementById('password').value;
+      const confirm = document.getElementById('confirmPassword').value;
+      if (pwd !== confirm) {
+        e.preventDefault();
+        document.getElementById('signup-error').textContent = 'Passwords do not match';
+        document.getElementById('signup-error').classList.remove('hidden');
+        return false;
+      }
+    });
+    // Auth check
+    if (localStorage.getItem('token')) window.location.href = 'dashboard.html';
+  </script>
+</body>
+</html>

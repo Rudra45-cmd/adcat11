@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credits & Usage - AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- SaaS UI Master -->
+  <link rel="stylesheet" href="../assets/css/saas-ui.css">
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Floating background shapes -->
+  <div class="fixed top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -z-10 animate-float"></div>
+
+  <div class="flex h-screen bg-gray-50">
+    <!-- Sidebar (same as other pages) -->
+    <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col transition-all duration-300 fixed md:relative h-full md:h-auto z-40">
+      <div class="px-6 py-8 border-b border-gray-200">
+        <a href="dashboard.html" class="flex items-center gap-3 group">
+          <img src="../assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat" class="w-10 h-10">
+          <span class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">AdCat</span>
+        </a>
+      </div>
+
+      <nav class="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+        <div class="px-2 mb-4">
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Main</p>
+        </div>
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 font-medium transition-all">
+          <i class="fas fa-gauge-high text-lg"></i><span>Dashboard</span>
+        </a>
+        <a href="create-ad.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 font-medium transition-all">
+          <i class="fas fa-plus-circle text-lg"></i><span>Create Ad</span>
+        </a>
+        <a href="projects.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 font-medium transition-all">
+          <i class="fas fa-folder-open text-lg"></i><span>Projects</span>
+        </a>
+        <div class="px-2 mb-4 mt-6">
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Account</p>
+        </div>
+        <a href="credits.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 text-blue-600 font-medium transition-all">
+          <i class="fas fa-coins text-lg"></i><span>Credits</span>
+        </a>
+        <a href="pricing.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 font-medium transition-all">
+          <i class="fas fa-tag text-lg"></i><span>Pricing</span>
+        </a>
+        <a href="profile.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 font-medium transition-all">
+          <i class="fas fa-user text-lg"></i><span>Profile</span>
+        </a>
+      </nav>
+
+      <div class="px-4 py-4 border-t border-gray-200">
+        <a href="javascript:void(0)" onclick="handleLogout()" class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium transition-all cursor-pointer">
+          <i class="fas fa-right-from-bracket text-lg"></i><span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col min-h-screen">
+      <!-- Top Navbar -->
+      <header class="bg-white border-b border-gray-200 sticky top-0 z-30 animate-slide-down">
+        <div class="flex items-center justify-between px-6 py-4">
+          <div class="flex items-center gap-4">
+            <button id="menuToggle" class="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <i class="fas fa-bars text-xl text-gray-600"></i>
+            </button>
+            <h1 class="text-2xl font-bold text-slate-900">Credits</h1>
+          </div>
+          
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-semibold">
+              <i class="fas fa-coins"></i>
+              <span class="credits-badge-nav">2,450 Credits</span>
+            </div>
+            <button class="relative p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <i class="fas fa-bell text-xl text-gray-600"></i>
+              <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+            <div class="flex items-center gap-3 pl-6 border-l border-gray-200">
+              <div class="text-right hidden sm:block">
+                <p class="user-name text-sm font-semibold text-slate-900">John Doe</p>
+                <p class="text-xs text-gray-500">Free Plan</p>
+              </div>
+              <div class="user-avatar w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold">JD</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="flex-1 overflow-auto">
+        <div class="p-6 md:p-8 max-w-6xl mx-auto">
+          <!-- Page Header -->
+          <section class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8 animate-fade-in">
+            <div>
+              <h2 class="text-4xl font-bold text-slate-900 mb-2">Credits & Usage</h2>
+              <p class="text-lg text-gray-600">Track your credit balance and usage across all your campaigns</p>
+            </div>
+            <a href="pricing.html" class="btn-gradient px-8 py-4 rounded-xl font-semibold text-center w-fit whitespace-nowrap">
+              <i class="fas fa-arrow-up mr-2"></i>
+              Upgrade Plan
+            </a>
+          </section>
+
+          <!-- Credits Balance -->
+          <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Available Credits -->
+            <div class="card-premium p-8 text-center hover-lift animate-slide-up stagger-1">
+              <div class="text-5xl font-bold text-blue-600 mb-2">2,450</div>
+              <p class="text-gray-600 text-sm mb-2">Available Credits</p>
+              <p class="text-xs text-gray-500">Enough for ~245 ads</p>
+            </div>
+
+            <!-- Used This Month -->
+            <div class="card-premium p-8 text-center hover-lift animate-slide-up stagger-2">
+              <div class="text-5xl font-bold text-amber-600 mb-2">550</div>
+              <p class="text-gray-600 text-sm mb-2">Used This Month</p>
+              <p class="text-xs text-gray-500">55% of monthly allowance</p>
+            </div>
+
+            <!-- Next Renewal -->
+            <div class="card-premium p-8 text-center hover-lift animate-slide-up stagger-3">
+              <div class="text-5xl font-bold text-green-600 mb-2">12</div>
+              <p class="text-gray-600 text-sm mb-2">Days Until Renewal</p>
+              <p class="text-xs text-gray-500">+1,000 credits</p>
+            </div>
+          </section>
+
+          <!-- Monthly Usage Breakdown -->
+          <section class="card-premium p-8 mb-8 animate-slide-up">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Monthly Usage Breakdown</h3>
+            
+            <div class="space-y-6">
+              <!-- Image Ads -->
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-images text-blue-600"></i>
+                    </div>
+                    <span class="font-semibold text-slate-900">Image Ads</span>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900">82 / 100</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 82%"></div>
+                </div>
+              </div>
+
+              <!-- Video Ads -->
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-video text-indigo-600"></i>
+                    </div>
+                    <span class="font-semibold text-slate-900">Video Ads</span>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900">18 / 25</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-3 rounded-full" style="width: 72%"></div>
+                </div>
+              </div>
+
+              <!-- Total Credits -->
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-coins text-amber-600"></i>
+                    </div>
+                    <span class="font-semibold text-slate-900">Total Credits Used</span>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900">550 / 1,000</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-amber-500 to-amber-600 h-3 rounded-full" style="width: 55%"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Transactions -->
+          <section class="card-premium p-8 animate-slide-up">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Recent Transactions</h3>
+            
+            <div class="space-y-3">
+              <!-- Transaction 1 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-image text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Tech Gadgets Promo</p>
+                    <p class="text-xs text-gray-500">Today at 2:30 PM</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-10 credits</span>
+              </div>
+
+              <!-- Transaction 2 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-video text-indigo-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Fashion Brand Launch</p>
+                    <p class="text-xs text-gray-500">Today at 11:00 AM</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-25 credits</span>
+              </div>
+
+              <!-- Transaction 3 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-image text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Food Delivery App</p>
+                    <p class="text-xs text-gray-500">Yesterday</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-10 credits</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+            <span class="font-semibold text-slate-900">Video Ads</span>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900">18 / 25</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-3 rounded-full" style="width: 72%"></div>
+                </div>
+              </div>
+
+              <!-- Total Credits -->
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-coins text-amber-600"></i>
+                    </div>
+                    <span class="font-semibold text-slate-900">Total Credits Used</span>
+                  </div>
+                  <span class="text-sm font-bold text-slate-900">550 / 1,000</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-gradient-to-r from-amber-500 to-amber-600 h-3 rounded-full" style="width: 55%"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Transactions -->
+          <section class="card-premium p-8 animate-slide-up">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Recent Transactions</h3>
+            
+            <div class="space-y-3">
+              <!-- Transaction 1 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-image text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Tech Gadgets Promo</p>
+                    <p class="text-xs text-gray-500">Today at 2:30 PM</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-10 credits</span>
+              </div>
+
+              <!-- Transaction 2 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-video text-indigo-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Fashion Brand Launch</p>
+                    <p class="text-xs text-gray-500">Today at 11:00 AM</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-25 credits</span>
+              </div>
+
+              <!-- Transaction 3 -->
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-image text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Food Delivery App</p>
+                    <p class="text-xs text-gray-500">Yesterday</p>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-900">-10 credits</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+          
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--gold-border);">
+                  <th style="text-align: left; padding: 12px 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Date</th>
+                  <th style="text-align: left; padding: 12px 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Project</th>
+                  <th style="text-align: left; padding: 12px 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Type</th>
+                  <th style="text-align: left; padding: 12px 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 16px; color: var(--text-secondary); font-size: 0.9rem;">Today, 2:30 PM</td>
+                  <td style="padding: 16px; color: var(--text-primary); font-size: 0.9rem;">Tech Gadgets Promo</td>
+                  <td style="padding: 16px;"><span style="padding: 4px 10px; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold-border); border-radius: 20px; font-size: 0.75rem; color: var(--accent-primary);">Image</span></td>
+                  <td style="padding: 16px; color: var(--text-primary); font-weight: 600;">-10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 16px; color: var(--text-secondary); font-size: 0.9rem;">Today, 11:00 AM</td>
+                  <td style="padding: 16px; color: var(--text-primary); font-size: 0.9rem;">Fashion Brand Launch</td>
+                  <td style="padding: 16px;"><span style="padding: 4px 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 20px; font-size: 0.75rem; color: var(--success);">Video</span></td>
+                  <td style="padding: 16px; color: var(--text-primary); font-weight: 600;">-25</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 16px; color: var(--text-secondary); font-size: 0.9rem;">Yesterday</td>
+                  <td style="padding: 16px; color: var(--text-primary); font-size: 0.9rem;">Food Delivery App</td>
+                  <td style="padding: 16px;"><span style="padding: 4px 10px; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold-border); border-radius: 20px; font-size: 0.75rem; color: var(--accent-primary);">Image</span></td>
+                  <td style="padding: 16px; color: var(--text-primary); font-weight: 600;">-10</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 16px; color: var(--text-secondary); font-size: 0.9rem;">2 days ago</td>
+                  <td style="padding: 16px; color: var(--text-primary); font-size: 0.9rem;">Online Course Promo</td>
+                  <td style="padding: 16px;"><span style="padding: 4px 10px; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold-border); border-radius: 20px; font-size: 0.75rem; color: var(--accent-primary);">Image</span></td>
+                  <td style="padding: 16px; color: var(--text-primary); font-weight: 600;">-10</td>
+                </tr>
+                <tr>
+                  <td style="padding: 16px; color: var(--text-secondary); font-size: 0.9rem;">3 days ago</td>
+                  <td style="padding: 16px; color: var(--text-primary); font-size: 0.9rem;">Fitness App Launch</td>
+                  <td style="padding: 16px;"><span style="padding: 4px 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 20px; font-size: 0.75rem; color: var(--success);">Video</span></td>
+                  <td style="padding: 16px; color: var(--text-primary); font-weight: 600;">-25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Get More Credits -->
+        <div class="section-card" style="margin-top: 24px; text-align: center; padding: 48px;">
+          <div style="margin-bottom: 16px;">
+            <i class="fa-solid fa-coins" style="font-size: 3rem; color: var(--accent-primary);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Need More Credits?</h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px; max-width: 400px; margin-left: auto; margin-right: auto;">Upgrade to a premium plan to get more credits every month and unlock additional features.</p>
+          <a href="pricing.html" class="btn btn-primary btn-large">
+            <i class="fa-solid fa-arrow-up"></i>
+            View Plans
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
