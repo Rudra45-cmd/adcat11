@@ -1,114 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdCat - AI Ad Generator | Create High-Converting Ads Instantly</title>
-  <meta name="description" content="Generate images, videos, and marketing copy with AI. Perfect ads in seconds for your business.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/tailwind-custom.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  <style>
-    /* Custom gradient text */
-    .gradient-text { 
-      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #06b6d4 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    /* Navbar scroll effect */
-    .navbar-transparent { 
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-    .navbar-blurred { 
-      backdrop-filter: saturate(180%) blur(30px) brightness(105%); 
-      background: rgba(255,255,255,0.92);
-      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.2);
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdCat — AI Ad Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer" aria-hidden="true">
+      <span class="blob blob-blue"></span>
+      <span class="blob blob-indigo"></span>
+      <span class="blob blob-soft"></span>
+    </div>
 
-    /* Glass Hero Card */
-    .glass-hero {
-      max-width: 1100px;
-      margin: 120px auto 0;
-      padding: 40px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.6);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.4);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-    .glass-hero:hover {
-      transform: scale(1.01);
-    }
-    .glass-navbar {
-      background: rgba(255,255,255,0.8);
-      backdrop-filter: blur(20px);
-      border-radius: 16px;
-      padding: 12px 24px;
-      margin-bottom: 32px;
-    }
-    .hero-heading {
-      font-size: clamp(3rem, 8vw, 4.5rem);
-      color: #1e3a8a;
-      font-weight: 800;
-    }
-    .gradient-heading {
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-text {
-      color: #64748b;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
-      transition: all 0.3s ease;
-    }
-    .btn-primary:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(59,130,246,0.4);
-    }
-    .btn-secondary {
-      border: 2px solid #e5e7eb;
-      color: #374151;
-    }
-    .btn-secondary:hover {
-      background: #eff6ff;
-      border-color: #3b82f6;
-    }
-    .stat-item {
-      color: #1e3a8a;
-    }
-  </style>
- </head>
-<body class="font-inter antialiased page-bg">
-  <!-- Cinematic Floating Blobs -->
-  <div class="fixed top-20 right-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-[60px] opacity-15 animate-float hover:animate-glowPulse -z-10 shadow-2xl" style="background: linear-gradient(to br, #3b82f6aa, #6366f1aa); animation-delay: 0s;"></div>
-  <div class="fixed bottom-32 left-20 w-96 h-96 rounded-full mix-blend-multiply filter blur-[60px] opacity-12 animate-float -z-10 shadow-2xl" style="background: linear-gradient(to br, #6366f166, #8b5cf166); animation-delay: 2s;"></div>
-  <div class="fixed top-1/2 -right-10 w-64 h-64 rounded-full mix-blend-multiply filter blur-[60px] opacity-18 animate-float hover:scale-110 -z-10 shadow-xl" style="background: linear-gradient(to br, #06b6d466, #3b82f666); animation-delay: 4s;"></div>
-  <div class="fixed bottom-20 left-1/4 w-48 h-48 rounded-full mix-blend-multiply filter blur-[60px] opacity-2 animate-float -z-10" style="background: linear-gradient(to br, #8b5cf166, #3b82f666); animation-delay: 1s;"></div>
-  <div class="fixed top-32 left-32 w-56 h-56 rounded-full blob-float -z-10 filter blur-[60px] opacity-15" style="background: linear-gradient(to br, #06b6d433, #3b82f433); animation-delay: 3s;"></div>
-  <div class="fixed bottom-40 right-32 w-64 h-64 rounded-full blob-float -z-10 filter blur-[60px] opacity-1" style="background: linear-gradient(to br, #6366f133, #8b5cf133); animation-delay: 5s;"></div>
+    <header class="container nav fade-in">
+      <a class="logo" href="index.html">Ad<span>Cat</span></a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="btn btn-outline">Get Started</a>
+      </nav>
+    </header>
 
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-transparent transition-all duration-300 px-6 py-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-<span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent flex items-center gap-2">
-  <i class="fas fa-cat text-xl"></i>AdCat</span>
-      </a>
-      
-      <!-- Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Home</a>
+    <main>
+      <section class="container section hero fade-in">
+        <article class="hero-glass">
+          <div class="hero-grid">
+            <div>
+              <span class="badge">AI Powered</span>
+              <h1>
+                Create High-Converting Ads
+                <span class="gradient-text">with AI</span>
+              </h1>
+              <p>
+                AdCat helps modern teams generate, test, and optimize ad creatives from one premium workspace. Launch campaigns faster with confidence.
+              </p>
+
+              <div class="hero-stats">
+                <div class="stat"><strong>10K+</strong><span>Ads</span></div>
+                <div class="stat"><strong>500+</strong><span>Users</span></div>
+                <div class="stat"><strong>98%</strong><span>Success</span></div>
+              </div>
+
+              <div class="hero-actions">
+                <a href="signup.html" class="btn btn-premium">Start Free</a>
+                <a href="#features" class="btn btn-outline">See Features</a>
+              </div>
+            </div>
+
+            <div class="dashboard-mockup">
+              <div class="mock-top"><span></span><span></span><span></span></div>
+              <div class="mock-chart"></div>
+              <div class="mock-cards">
+                <div class="mini-card"><strong>4.8x</strong><small>ROAS</small></div>
+                <div class="mini-card"><strong>+62%</strong><small>CTR</small></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="container section" id="features">
+        <div class="section-head">
+          <h2>Built for performance-focused teams</h2>
+          <p>Clean tools for high-impact ad creation without the noise.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card hover-lift">
+            <h3>AI Creative Engine</h3>
+            <p>Generate hooks, headlines, and full ad copy in seconds with your brand tone preserved.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Conversion Insights</h3>
+            <p>Track what converts and get actionable suggestions to scale winners faster.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Team Workflow</h3>
+            <p>Collaborate, review, and ship campaigns in one elegant workspace.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section" id="how">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Simple, fast, and built for velocity.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card hover-lift">
+            <div class="step">01</div>
+            <h3>Describe your product</h3>
+            <p>Drop your offer details and target audience.</p>
+          </article>
+          <article class="card hover-lift">
+            <div class="step">02</div>
+            <h3>Generate ad variants</h3>
+            <p>Get multiple ad concepts crafted by AI in one click.</p>
+          </article>
+          <article class="card hover-lift">
+            <div class="step">03</div>
+            <h3>Optimize and scale</h3>
+            <p>Use feedback loops to improve performance over time.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
         <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Features</a>
         <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Pricing</a>
         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Contact</a>
