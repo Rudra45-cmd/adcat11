@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --secondary: #6366f1;
+  --accent: #06b6d4;
+
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --text-strong: #0f172a;
+
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.7);
+  --line: #dbe3f2;
+  --line-soft: #e5eaf5;
+
+  --bg-gradient: linear-gradient(135deg, #ffffff, #eef2ff, #e0e7ff);
+  --gradient-primary: linear-gradient(90deg, var(--primary), var(--secondary));
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 30px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-lift: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --shadow-nav: 0 12px 28px rgba(15, 23, 42, 0.08);
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-gradient);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 0.9rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
