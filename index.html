@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdCat — AI Ad Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="intro-loader">
+      <div class="gate gate-left"></div>
+      <div class="gate gate-right"></div>
+      <div class="light"></div>
+      <div class="intro-content">
+        <h1 class="logo-text">AdCat</h1>
+        <p class="tagline">AI Powered Ads</p>
+      </div>
+    </div>
+
+    <div class="bg-layer" aria-hidden="true">
+      <span class="blob blob-blue"></span>
+      <span class="blob blob-indigo"></span>
+      <span class="blob blob-soft"></span>
+    </div>
+
+    <header class="container nav fade-in">
+      <a class="logo" href="index.html">Ad<span>Cat</span></a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="btn btn-outline">Get Started</a>
+      </nav>
+    </header>
+
+    <div id="loading-overlay">
+      <div class="loader">
+        <div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div>
+      </div>
+      <p>Generating with AI...</p>
+    </div>
+
+    <main>
+      <section class="container section hero hero-bg fade-in">
+        <article class="hero-glass">
+          <div class="hero-grid">
+            <div>
+              <span class="badge">AI Powered</span>
+              <h1>
+                Create High-Converting Ads
+                <span class="gradient-text">with AI</span>
+              </h1>
+              <p>
+                AdCat helps modern teams generate, test, and optimize ad creatives from one premium workspace. Launch campaigns faster with confidence.
+              </p>
+
+              <div class="hero-stats">
+                <div class="stat"><strong>10K+</strong><span>Ads</span></div>
+                <div class="stat"><strong>500+</strong><span>Users</span></div>
+                <div class="stat"><strong>98%</strong><span>Success</span></div>
+              </div>
+
+              <div class="hero-actions">
+                <a href="signup.html" class="btn btn-premium">Start Free</a>
+                <a href="#features" class="btn btn-outline">See Features</a>
+              </div>
+            </div>
+
+            <div class="dashboard-mockup">
+              <div class="mock-top"><span></span><span></span><span></span></div>
+              <div class="mock-chart"></div>
+              <div class="mock-cards">
+                <div class="mini-card"><strong>4.8x</strong><small>ROAS</small></div>
+                <div class="mini-card"><strong>+62%</strong><small>CTR</small></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="container section" id="features">
+        <div class="section-head">
+          <h2>Built for performance-focused teams</h2>
+          <p>Clean tools for high-impact ad creation without the noise.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card hover-lift">
+            <h3>AI Creative Engine</h3>
+            <p>Generate hooks, headlines, and full ad copy in seconds with your brand tone preserved.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Conversion Insights</h3>
+            <p>Track what converts and get actionable suggestions to scale winners faster.</p>
+          </article>
+          <article class="card hover-lift">
+            <h3>Team Workflow</h3>
+            <p>Collaborate, review, and ship campaigns in one elegant workspace.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section" id="how">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Simple, fast, and built for velocity.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card hover-lift">
+            <div class="step">01</div>
+            <h3>Describe your product</h3>
+            <p>Drop your offer details and target audience.</p>
+          </article>
+          <article class="card hover-lift">
+            <div class="step">02</div>
+            <h3>Generate ad variants</h3>
+            <p>Get multiple ad concepts crafted by AI in one click.</p>
+          </article>
+          <article class="card hover-lift">
+            <div class="step">03</div>
+            <h3>Optimize and scale</h3>
+            <p>Use feedback loops to improve performance over time.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+        <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Features</a>
+        <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Pricing</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-all hover:scale-105">Contact</a>
+      </div>
+      
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <a href="login.html" class="text-gray-700 hover:text-gray-900 font-medium transition-all hover:scale-105">Sign In</a>
+        <a href="signup.html" class="btn-gradient glass-border ripple px-6 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-2xl hover:-translate-y-1 animate-scaleIn">Get Started</a>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <button id="mobile-menu" class="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-all glow-hover">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+<div class="hero-glass mx-auto px-6 md:grid md:grid-cols-2 md:gap-16 items-center md:max-w-none">
+      <!-- Hero Content -->
+      <div class="animate-fadeInUp">
+
+        <div class="inline-flex items-center gap-2 bg-blue-100/80 backdrop-blur-sm px-4 py-2 rounded-full mb-8 animate-glowPulse">
+          <div class="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse"></div>
+          <span class="font-semibold text-sm text-blue-800">AI Powered</span>
+        </div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight mb-8 drop-shadow-lg bg-gradient-to-r from-transparent via-white/20 to-transparent px-3 py-1 rounded-xl inline-block [text-shadow:_0_4px_16px_rgba(59,130,246,0.4)]">
+          Create <span class="gradient-text block md:inline">High-Converting</span><br class="md:hidden">
+          Ads with <span class="gradient-text block md:inline">AI</span><br>
+          <span class="text-6xl md:text-7xl opacity-90">in <span class="text-4xl animate-gradientShift inline-block">Seconds</span></span>
+        </h1>
+<p class="hero-text text-xl mb-6 max-w-lg leading-relaxed">
+          Generate stunning images, videos, and marketing copy instantly using cutting-edge AI.
+          Perfect for social media, e-commerce, and campaigns.
+        </p>
+        <!-- Fintech Stats -->
+<div class="grid grid-cols-3 gap-8 mb-10 text-center md:text-left md:grid-cols-3">
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">10K+</div>
+            <p class="text-lg font-semibold hero-text">Ads Generated</p>
+          </div>
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">500+</div>
+            <p class="text-lg font-semibold hero-text">Users</p>
+          </div>
+          <div class="stat-item text-center">
+            <div class="text-4xl font-black gradient-heading mb-2">98%</div>
+            <p class="text-lg font-semibold hero-text">Success</p>
+          </div>
+        </div>
+        <div class="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
+        <a href="signup.html" class="btn-primary w-full sm:w-auto px-10 py-5 rounded-3xl font-bold text-xl shadow-2xl animate-glowPulse">Start Free Trial</a>
+          <a href="#demo" class="btn-secondary w-full sm:w-auto flex items-center gap-3 px-10 py-5 rounded-3xl font-semibold">Watch Demo <i class="fas fa-play"></i></a>
+        </div>
+      </div>
+      
+      <!-- Hero Image -->
+      <div class="relative animate-[float_8s_ease-in-out_infinite] hover:animate-glowPulse" style="animation-delay: 0.5s;">
+        <div class="relative z-10 rounded-3xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.15)] max-w-lg mx-auto hover:shadow-glow-xl hover:scale-102 transition-all duration-500">
+          <div class="relative">
+            <video class="rounded-3xl shadow-2xl w-full h-[450px] object-cover hover:scale-105 transition-transform duration-1000 group-hover:rotate-1" muted loop playsinline poster="https://images.unsplash.com/photo-1666814626241-90e7764a85b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=85">
+              <source src="assets/im and video/Untitled design.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent opacity-70 hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500/80 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-2xl animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] ring-4 ring-emerald-400/30 backdrop-blur-sm">
+              AI Live
+            </div>
+            <div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-xl px-6 py-3 rounded-2xl font-bold text-slate-900 shadow-2xl animate-scaleIn">
+              Dashboard Preview
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Trust Section (Compact) -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 animate-fadeInUp">
+        Trusted by businesses worldwide
+      </h2>
+      <div class="grid md:grid-cols-3 gap-16">
+        <div class="group cursor-default animate-fadeInUp" style="animation-delay: 0.1s;">
+          <div class="text-5xl font-bold gradient-text mb-4 group-hover:scale-110 transition-transform">10K+</div>
+          <p class="text-xl text-gray-600 font-semibold">Ads Generated</p>
+        </div>
+        <div class="group cursor-default animate-fadeInUp" style="animation-delay: 0.2s;">
+          <div class="text-5xl font-bold gradient-text mb-4 group-hover:scale-110 transition-transform">500+</div>
+          <p class="text-xl text-gray-600 font-semibold">Happy Users</p>
+        </div>
+        <div class="group cursor-default animate-fadeInUp" style="animation-delay: 0.3s;">
+          <div class="text-5xl font-bold gradient-text mb-4 group-hover:scale-110 transition-transform">98%</div>
+          <p class="text-xl text-gray-600 font-semibold">Success Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-28 bg-gradient-to-b from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20 animate-fadeInUp">
+        <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-slate-900 mb-6">Everything you need to create perfect ads</h2>
+        <p class="text-xl text-gray-500/80 max-w-2xl mx-auto">AI-powered tools designed for marketers and businesses of all sizes.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.1s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">AI Ad Generator</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Transform product links into stunning ad creatives in seconds. No design skills required.</p>
+          <i class="fas fa-arrow-right text-2xl text-blue-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.2s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-pen-fancy"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Smart Copywriting</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">AI generates persuasive headlines, captions, and calls-to-action optimized for conversions.</p>
+          <i class="fas fa-arrow-right text-2xl text-indigo-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.3s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Video AI Creation</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Create professional video ads with AI voiceovers and animations. Ready for social media.</p>
+          <i class="fas fa-arrow-right text-2xl text-emerald-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.4s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Analytics Dashboard</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Track ad performance, A/B test variations, and optimize your campaigns with real data.</p>
+          <i class="fas fa-arrow-right text-2xl text-purple-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.5s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-download"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Multi-platform Export</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Export in all formats - Instagram, Facebook, TikTok, YouTube, LinkedIn, and more.</p>
+          <i class="fas fa-arrow-right text-2xl text-orange-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="card-premium group cursor-pointer animate-fadeInUp" style="animation-delay: 0.6s;">
+          <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-xl">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Brand Customization</h3>
+          <p class="text-gray-600 leading-relaxed">Match your brand colors, fonts, and style guidelines perfectly across all creatives.</p>
+          <i class="fas fa-arrow-right text-2xl text-rose-600 group-hover:translate-x-2 transition-transform"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-28 bg-gradient-to-b from-white to-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-slate-900 mb-6 animate-fadeInUp">How it works</h2>
+        <p class="text-xl text-gray-500/80 max-w-2xl mx-auto">Three simple steps to create professional ads</p>
+      </div>
+      
+      <!-- Premium Horizontal Flow - Razorpay/Stripe Style -->
+      <div class="relative flex flex-col lg:flex-row gap-16 items-stretch justify-center max-w-7xl mx-auto px-6 lg:px-0">
+        <!-- Step 1 -->
+        <div class="flex-1 max-w-sm group cursor-pointer relative z-10 animate-[fadeInUp_0.6s_ease-out_0.2s_both]" style="animation-fill-mode: both;">
+          <div class="how-works-card backdrop-blur-xl bg-white/80 rounded-3xl p-10 shadow-2xl hover:shadow-glow hover:scale-[1.02] hover:-translate-y-3 transition-all duration-700 border border-white/40 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500/80 to-indigo-500/80"></div>
+            <div class="flex flex-col items-center gap-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-3xl flex items-center justify-center text-white shadow-2xl ring-4 ring-blue-500/20 animate-float">
+                <i class="fas fa-link text-xl"></i>
+              </div>
+              <div class="bg-gradient-to-br from-blue-500 to-indigo-500 w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg -mt-6 z-20 border-4 border-white/50">01</div>
+              <h3 class="text-2xl font-bold text-slate-900 text-center">Enter Product</h3>
+              <p class="text-gray-600 text-center leading-relaxed text-base opacity-90">Paste your product link or upload image. AI instantly analyzes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow Connector 1 -->
+        <div class="hidden lg:flex lg:flex-col items-center gap-4 flex-0 lg:w-32">
+          <div class="w-px h-48 bg-gradient-to-b from-blue-400/50 to-indigo-400/50 rounded-full shadow-md animate-pulse"></div>
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full shadow-lg border-4 border-white/50 animate-pulse"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex-1 max-w-sm group cursor-pointer relative z-10 animate-[fadeInUp_0.6s_ease-out_0.4s_both]" style="animation-fill-mode: both;">
+          <div class="backdrop-blur-xl bg-white/80 rounded-3xl p-10 shadow-2xl hover:shadow-glow hover:scale-[1.02] hover:-translate-y-3 transition-all duration-700 border border-white/40 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500/80 to-purple-500/80"></div>
+            <div class="flex flex-col items-center gap-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-3xl flex items-center justify-center text-white shadow-2xl ring-4 ring-indigo-500/20 animate-float">
+                <i class="fas fa-magic text-xl"></i>
+              </div>
+              <div class="bg-gradient-to-br from-indigo-500 to-purple-500 w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg -mt-6 z-20 border-4 border-white/50">02</div>
+              <h3 class="text-2xl font-bold text-slate-900 text-center">AI Generates</h3>
+              <p class="text-gray-600 text-center leading-relaxed text-base opacity-90">Watch AI create stunning variations with copy & animations in seconds.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow Connector 2 -->
+        <div class="hidden lg:flex lg:flex-col items-center gap-4 flex-0 lg:w-32">
+          <div class="w-px h-48 bg-gradient-to-b from-indigo-400/50 to-emerald-400/50 rounded-full shadow-md animate-pulse"></div>
+          <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-emerald-500 rounded-full shadow-lg border-4 border-white/50 animate-pulse"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex-1 max-w-sm group cursor-pointer relative z-10 animate-[fadeInUp_0.6s_ease-out_0.6s_both]" style="animation-fill-mode: both;">
+          <div class="backdrop-blur-xl bg-white/80 rounded-3xl p-10 shadow-2xl hover:shadow-glow hover:scale-[1.02] hover:-translate-y-3 transition-all duration-700 border border-white/40 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500/80 to-teal-500/80"></div>
+            <div class="flex flex-col items-center gap-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-3xl flex items-center justify-center text-white shadow-2xl ring-4 ring-emerald-500/20 animate-float">
+                <i class="fas fa-download text-xl"></i>
+              </div>
+              <div class="bg-gradient-to-br from-emerald-500 to-teal-500 w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-lg -mt-6 z-20 border-4 border-white/50">03</div>
+              <h3 class="text-2xl font-bold text-slate-900 text-center">Download & Use</h3>
+              <p class="text-gray-600 text-center leading-relaxed text-base opacity-90">Download high-res files optimized for all platforms. Launch immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-8px); }
+        }
+      </style>
+
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/50"></div>
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20 animate-fadeInUp">
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-slate-900 mb-6">See AdCat in action</h2>
+        <p class="text-xl text-gray-500/80 max-w-2xl mx-auto">Watch how AI creates perfect ads in under 30 seconds</p>
+      </div>
+      
+      <div class="relative group demo-hover demo-zoom animate-float">
+        <div class="glass-border rounded-3xl p-2 max-w-4xl mx-auto shadow-2xl backdrop-blur-xl border-white/40">
+          <div class="relative overflow-hidden rounded-2xl aspect-video bg-gradient-to-br from-slate-900 to-black">
+            <video class="w-full h-full object-cover" muted loop playsinline poster="https://images.unsplash.com/photo-1618005182386-a1e3162e4b0c?ixlib=rb-4.0.3&w=1200">
+              <source src="assets/im and video/Untitled design.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-center justify-center">
+              <div class="w-28 h-28 rounded-full bg-white/30 backdrop-blur-xl border-4 border-white/50 flex items-center justify-center text-3xl text-white font-bold shadow-2xl hover:scale-125 hover:rotate-[-10deg] transition-all duration-300 glow-hover pulse-ring group-hover:animate-bounce relative overflow-hidden cursor-pointer">
+                <i class="fas fa-play relative z-10"></i>
+                <div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-full -rotate-45 [animation:spin_3s_linear_infinite]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20 animate-fadeInUp">
+        <h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-slate-900 mb-6">What marketers are saying</h2>
+        <p class="text-xl text-gray-500/80">Join thousands of happy customers creating ads with AI</p>
+      </div>
+      
+<div class="relative overflow-hidden max-w-4xl mx-auto">
+  <!-- Auto-scroll Testimonials (Stripe-style marquee) -->
+  <div class="flex animate-marquee gap-8 whitespace-nowrap py-8">
+    <div class="glass-border p-8 rounded-3xl min-w-[320px] hover:shadow-glow hover:-translate-y-4 transition-all cursor-pointer shrink-0">
+      <div class="flex gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">AS</div>
+        <div>
+          <p class="font-bold text-slate-900 mb-1">Ankit Sharma</p>
+          <div class="flex gap-1 text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic leading-relaxed">"AdCat completely transformed our ad creation process. What took days now takes minutes!"</p>
+    </div>
+    <div class="glass-border p-8 rounded-3xl min-w-[320px] hover:shadow-glow hover:-translate-y-4 transition-all cursor-pointer shrink-0">
+      <div class="flex gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">RS</div>
+        <div>
+          <p class="font-bold text-slate-900 mb-1">Riya Singh</p>
+          <div class="flex gap-1 text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic leading-relaxed">"The AI copywriter is genius. Our click-through rates doubled overnight."</p>
+    </div>
+    <div class="glass-border p-8 rounded-3xl min-w-[320px] hover:shadow-glow hover:-translate-y-4 transition-all cursor-pointer shrink-0">
+      <div class="flex gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">MK</div>
+        <div>
+          <p class="font-bold text-slate-900 mb-1">Mohan Kumar</p>
+          <div class="flex gap-1 text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic leading-relaxed">"Best ROI tool we've invested in. AdCat pays for itself every month."</p>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="glass-border p-8 rounded-3xl min-w-[320px] hover:shadow-glow hover:-translate-y-4 transition-all cursor-pointer shrink-0">
+      <div class="flex gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">AS</div>
+        <div>
+          <p class="font-bold text-slate-900 mb-1">Ankit Sharma</p>
+          <div class="flex gap-1 text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic leading-relaxed">"AdCat completely transformed our ad creation process. What took days now takes minutes!"</p>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; }
+.hover\:pause-marquee:hover .animate-marquee { animation-play-state: paused; }
+@media (hover: none) { .animate-marquee { animation-duration: 20s; } }
+</style>
+    </div>
+  </section>
+
+  <!-- Pricing Preview -->
+  <section id="pricing" class="py-28 bg-gradient-to-b from-slate-50 to-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-20 animate-fadeInUp">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Simple, transparent pricing</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-12">Choose the plan that fits your needs. Cancel anytime.</p>
+        <!-- Stripe-style Billing Toggle -->
+        <div class="inline-flex items-center bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-lg border border-gray-200 max-w-md mx-auto">
+          <span class="text-sm font-medium text-gray-700 mr-4 whitespace-nowrap">Monthly</span>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="sr-only peer" id="billing-toggle">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+            <span class="text-sm font-medium text-gray-700 ml-4 whitespace-nowrap">Annual (Save 20%)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <!-- Feature Comparison Matrix (below toggle) -->
+        <div class="md:col-span-3 bg-white/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-200 hidden md:grid md:grid-cols-4 gap-4 text-center text-sm font-medium">
+          <div class="font-bold text-slate-900">Feature</div>
+          <div class="font-bold text-slate-900 col-span-1">Starter</div>
+          <div class="font-bold text-slate-900 col-span-1 bg-blue-50/50 rounded-xl py-2">Growth</div>
+          <div class="font-bold text-slate-900 col-span-1">Pro</div>
+        </div>
+        <!-- Starter -->
+        <div class="glass-border relative p-10 rounded-3xl hover:shadow-glow hover:-translate-y-4 transition-all duration-500 animate-fadeInUp" style="animation-delay: 0.1s;">
+          <h3 class="text-3xl font-bold text-slate-900 mb-4">Starter</h3>
+          <div class="text-5xl font-bold gradient-text mb-2">₹499<span class="text-3xl font-normal text-gray-500">/mo</span></div>
+          <p class="text-gray-600 mb-8">Perfect for freelancers and small teams</p>
+          <!-- Features as matrix rows -->
+          <div class="space-y-3 mb-10 text-gray-700 text-sm">
+            <div class="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
+              <span>Image Ads/mo</span>
+              <div class="flex items-center gap-4 text-center">
+                <span class="min-w-[80px]">50</span>
+                <span class="min-w-[80px] font-bold text-blue-600">200+</span>
+                <span class="min-w-[80px]">Unlimited</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-gray-100">
+              <span>Video Ads/mo</span>
+              <div class="flex items-center gap-4 text-center">
+                <span class="min-w-[80px]">10</span>
+                <span class="min-w-[80px] font-bold text-blue-600">50+</span>
+                <span class="min-w-[80px]">Unlimited</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between py-2 border-b border-gray-100">
+              <span>Analytics</span>
+              <div class="flex items-center gap-4 text-center">
+                <span class="min-w-[80px]">Basic</span>
+                <span class="min-w-[80px] font-bold text-blue-600">Advanced</span>
+                <span class="min-w-[80px]">Premium</span>
+              </div>
+            </div>
+          </div>
+          <a href="signup.html" class="btn btn-secondary w-full py-4 rounded-2xl font-bold border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all">Choose Starter</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="glass-border relative p-10 rounded-3xl ring-2 ring-blue-200/50 bg-gradient-to-b from-blue-50/50 to-indigo-50/30 hover:shadow-glow hover:-translate-y-6 transition-all duration-700 animate-fadeInUp" style="animation-delay: 0.2s;">
+<span class="absolute -top-4 left-1/2 -translate-x-1/2 pricing-badge animate-glowPulse animate-shimmer">Most Popular</span>
+          <h3 class="text-3xl font-bold text-slate-900 mb-4">Growth</h3>
+          <div class="text-5xl font-bold gradient-text mb-2">₹1,499<span class="text-3xl font-normal text-gray-500">/mo</span></div>
+          <p class="text-gray-600 mb-8">Best for marketing teams & agencies</p>
+          <ul class="space-y-3 mb-10 text-gray-700">
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>200+ image ads/month</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>50+ video ads/month</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>Advanced analytics</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>Team collaboration</li>
+          </ul>
+        <a href="signup.html" class="btn-gradient glass-border ripple w-full py-4 rounded-2xl font-bold shadow-2xl cta-glow hover:shadow-glow bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-400">Choose Growth</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="glass-border relative p-10 rounded-3xl hover:shadow-glow hover:-translate-y-4 transition-all duration-500 animate-fadeInUp" style="animation-delay: 0.3s;">
+          <h3 class="text-3xl font-bold text-slate-900 mb-4">Pro</h3>
+          <div class="text-5xl font-bold gradient-text mb-2">₹4,999<span class="text-3xl font-normal text-gray-500">/mo</span></div>
+          <p class="text-gray-600 mb-8">Enterprise-grade ad production</p>
+          <ul class="space-y-3 mb-10 text-gray-700">
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>Unlimited everything</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>API access</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>Dedicated support</li>
+            <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-500"></i>White-label</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary w-full py-4 rounded-2xl font-bold border-2 border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-all">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+  <!-- Final CTA -->
+  <section class="py-28 relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center text-white animate-fadeInUp">
+      <div class="animate-glowPulse mb-8">
+        <i class="fas fa-rocket text-6xl"></i>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-xl leading-tight">
+        Ready to create ads 10x faster?
+      </h2>
+      <p class="text-2xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+        Join 500+ marketers using AdCat to generate high-converting ads every day.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="signup.html" class="btn-gradient glass-border ripple px-12 py-6 rounded-3xl text-xl font-bold shadow-2xl cta-glow hover:shadow-glow hover:scale-105 active:scale-95 bg-white text-slate-900 hover:bg-slate-100 animate-glowPulse">Start Free Trial</a>
+        <div class="flex items-center gap-8 text-sm opacity-80">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-lock"></i>
+            <span>Secure & Private</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-undo"></i>
+            <span>Cancel anytime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+      <!-- Product -->
+      <div>
+        <div class="flex items-center gap-3 mb-8">
+          <img src="assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat" class="w-10 h-10">
+          <span class="text-2xl font-bold gradient-text">AdCat</span>
+        </div>
+        <p class="text-gray-400 mb-6 max-w-sm leading-relaxed">AI-powered ad creation platform that helps marketers generate high-converting creatives in seconds.</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all glow-hover">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all glow-hover">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-all glow-hover">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Company</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">About</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Careers</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Press</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Product</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Features</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Pricing</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Security</a></li>
+          <li><a href="dashboard.html" class="hover:text-white transition-colors hover:scale-105">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="text-xl font-bold mb-6">Legal</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Privacy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Terms</a></li>
+          <li><a href="#" class="hover:text-white transition-colors hover:scale-105">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-white/10 mt-16 pt-12 text-center text-gray-400 text-sm">
+      <p>&copy; 2024 AdCat. All rights reserved. Made with ❤️ for marketers.</p>
+    </div>
+  </footer>
+
+<script src="assets/js/animations.js"></script>
+  <script>
+    // Navbar scroll effect
+    let lastScrollY = 0;
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-blurred');
+      } else {
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-blurred');
+      }
+      lastScrollY = window.scrollY;
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Pricing Toggle JS (Stripe-style)
+    const billingToggle = document.getElementById('billing-toggle');
+    const priceElements = document.querySelectorAll('.text-5xl.font-bold.gradient-text');
+    const monthlyPrices = { starter: '₹499', growth: '₹1,499', pro: '₹4,999' };
+    const annualPrices = { starter: '₹4,788', growth: '₹14,388', pro: '₹47,988' }; // 20% save
+
+    billingToggle.addEventListener('change', (e) => {
+      const isAnnual = e.target.checked;
+      priceElements.forEach((el, i) => {
+        const plan = ['starter', 'growth', 'pro'][i];
+        el.innerHTML = (isAnnual ? annualPrices[plan] : monthlyPrices[plan]) + `<span class="text-3xl font-normal text-gray-500">/${isAnnual ? 'yr' : 'mo'}</span>`;
+      });
+      document.querySelectorAll('.space-y-3 div').forEach(row => row.style.opacity = isAnnual ? '0.7' : '1'); // Slight fade for annual
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- SaaS UI Master -->
+  <link rel="stylesheet" href="../assets/css/saas-ui.css">
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white via-blue-50/40 to-indigo-50/30">
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-logo">
+          <img class="logo-img" src="../assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat logo" />
+          <span class="logo-text">AdCat</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="create-ad.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Create Ad</span>
+        </a>
+        <a href="projects.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <div class="sidebar-nav-label">Account</div>
+        <a href="credits.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-coins"></i>
+          <span>Credits</span>
+        </a>
+        <a href="pricing.html" class="sidebar-nav-item active">
+          <i class="fa-solid fa-tag"></i>
+          <span>Pricing</span>
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-nav-item logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div class="navbar-left">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="page-title">Pricing</h1>
+        </div>
+        <div class="navbar-right">
+          <div class="credits-badge-nav">
+            <i class="fa-solid fa-coins"></i>
+            <span>2,450 Credits</span>
+          </div>
+          <button class="notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-badge"></span>
+          </button>
+          <div class="user-menu">
+            <div class="user-avatar">JD</div>
+            <div class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Free Plan</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header text-center max-w-xl mx-auto mb-12 p-premium">
+          <h1 class="page-heading">Choose Your Plan</h1>
+          <p class="page-subheading">Select the perfect plan for your ad creation needs. Upgrade or downgrade anytime.</p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="pricing-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-tier-card">
+            <h3 class="pricing-tier-name">Starter</h3>
+            <div class="pricing-tier-price">₹499<span>/mo</span></div>
+            <p class="pricing-tier-desc">Perfect for individuals just getting started</p>
+            
+            <div class="pricing-features-list">
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>50 images/month</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>10 videos/month</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Basic customization</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Standard support</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-secondary btn-full">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Buy Plan
+            </button>
+          </div>
+
+          <!-- Growth Plan (Featured) -->
+          <div class="pricing-tier-card featured">
+            <span class="pricing-badge">Most Popular</span>
+            <h3 class="pricing-tier-name">Growth</h3>
+            <div class="pricing-tier-price">₹1,499<span>/mo</span></div>
+            <p class="pricing-tier-desc">Best for growing businesses and marketers</p>
+            
+            <div class="pricing-features-list">
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>200 images/month</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>50 videos/month</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Full customization</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Priority support</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Multiple brand profiles</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary btn-full">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Buy Plan
+            </button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="pricing-tier-card">
+            <h3 class="pricing-tier-name">Pro</h3>
+            <div class="pricing-tier-price">₹4,999<span>/mo</span></div>
+            <p class="pricing-tier-desc">For agencies and high-volume users</p>
+            
+            <div class="pricing-features-list">
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Unlimited images</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Unlimited videos</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Advanced customization</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>API access</span>
+              </div>
+              <div class="pricing-feature">
+                <i class="fa-solid fa-check"></i>
+                <span>Dedicated support</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-secondary btn-full">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Buy Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section-card mt-12 p-premium card-premium rounded-premium">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Frequently Asked Questions</h2>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+            <div>
+              <h4 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">What are credits?</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Credits are used to generate ads. Each image ad costs 10 credits, and each video ad costs 25 credits.</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Can I upgrade anytime?</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">What payment methods do you accept?</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">We accept all major credit cards, debit cards, UPI, and net banking.</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Is there a free trial?</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">Yes! All new users get 50 free credits to try out the platform before subscribing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+  <script>
+    // Check authentication
+    function checkAuth() {
+      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      if (!user || !token) {
+        window.location.href = '../login.html';
+        return null;
+      }
+      return JSON.parse(user);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      
+      // Existing scripts continue here...
+    });
+  </script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/app.js"></script>
+
+</body>
+</html>
+

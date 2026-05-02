@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generating Ad - AdCat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    :root {
+      --bg: #F5F8FF;
+      --card: rgba(255,255,255,0.85);
+      --text-primary: #111827;
+      --text-secondary: #475569;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+      --border: rgba(255,255,255,0.2);
+      --shadow: 0 25px 80px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 18%),
+                  linear-gradient(180deg, #F7F9FF 0%, #F5F8FF 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: var(--text-primary);
+    }
+
+    .page-shell {
+      width: min(100%, 840px);
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .preview-card {
+      @apply glass-border rounded-3xl overflow-hidden shadow-2xl min-h-[400px] relative p-10 flex flex-col items-center justify-center gap-4;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
+    }
+
+    .preview-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.18), transparent 22%),
+                  radial-gradient(circle at 80% 25%, rgba(168, 85, 247, 0.16), transparent 20%),
+                  radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.08), transparent 18%);
+      pointer-events: none;
+    }
+
+    .preview-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      width: 100%;
+    }
+
+    .preview-play {
+      @apply w-28 h-28 rounded-full inline-flex items-center justify-center mx-auto pulse-ring glow-hover relative shadow-2xl border-2 border-white/20;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+    }
+
+    .preview-play:hover {
+      @apply scale-110 shadow-glow;
+      transform: rotate(5deg);
+    }
+
+    .preview-play i {
+      @apply text-3xl font-bold;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .preview-label {
+      margin-top: 1.25rem;
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .progress-card {
+      @apply glass-border rounded-3xl p-8 shadow-xl border-white/20;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 30px 90px rgba(15,23,42,0.1);
+    }
+
+    .progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .progress-header h2 {
+      margin: 0;
+      font-size: 1.125rem;
+      letter-spacing: -0.02em;
+    }
+
+    .progress-number {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .progress-bar-wrapper {
+      width: 100%;
+      height: 14px;
+      border-radius: 999px;
+      background: #E7F0FF;
+      overflow: hidden;
+      border: 1px solid rgba(43, 110, 242, 0.12);
+    }
+
+    .progress-bar-fill {
+      @apply w-full h-full rounded-full animate-gradientShift shadow-glow;
+      background: linear-gradient(90deg, #3b82f6 0%, #6366f1 50%, #06b6d4 100%) !important;
+      background-size: 200% 100%;
+      box-shadow: 0 0 30px rgba(59,130,246,0.4);
+    }
+
+    .progress-meta {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .progress-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .progress-meta i {
+      color: var(--accent);
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 1.25rem;
+      }
+      .page-shell {
+        gap: 1rem;
+      }
+      .preview-card {
+        min-height: 320px;
+        padding: 2rem;
+      }
+      .progress-card {
+        padding: 1.75rem;
+      }
+      .progress-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .progress-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <div id="loading-overlay">
+    <div class="loader"><div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div></div>
+    <p>Generating with AI...</p>
+  </div>
+  <div class="page-shell">
+    <section class="preview-card">
+      <div class="preview-content">
+        <div class="preview-play">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <p class="preview-label">Video preview loading...</p>
+      </div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-header">
+        <h2>Generating progress</h2>
+        <div class="progress-number">100%</div>
+      </div>
+      <div class="progress-bar-wrapper">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="progress-meta">
+        <span><i class="fa-solid fa-clock"></i> Estimated completion</span>
+        <span><i class="fa-solid fa-check"></i> Rendering complete</span>
+      </div>
+    </section>
+  </div>
+  <script>
+    // Check authentication
+    function checkAuth() {
+      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      if (!user || !token) {
+        window.location.href = '../login.html';
+        return null;
+      }
+      return JSON.parse(user);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.showLoader) window.showLoader();
+      setTimeout(() => window.hideLoader && window.hideLoader(), 900);
+      checkAuth();
+      
+      // Existing scripts continue here...
+    });
+  </script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/app.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

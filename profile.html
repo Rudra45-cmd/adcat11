@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white via-blue-50/40 to-indigo-50/30">
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-logo">
+          <img class="logo-img" src="../assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat logo" />
+          <span class="logo-text">AdCat</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="create-ad.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Create Ad</span>
+        </a>
+        <a href="projects.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <div class="sidebar-nav-label">Account</div>
+        <a href="credits.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-coins"></i>
+          <span>Credits</span>
+        </a>
+        <a href="pricing.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-tag"></i>
+          <span>Pricing</span>
+        </a>
+        <a href="profile.html" class="sidebar-nav-item active">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-nav-item logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div class="navbar-left">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="page-title">Profile</h1>
+        </div>
+        <div class="navbar-right">
+          <div class="credits-badge-nav">
+            <i class="fa-solid fa-coins"></i>
+            <span>2,450 Credits</span>
+          </div>
+          <button class="notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-badge"></span>
+          </button>
+          <div class="user-menu">
+            <div class="user-avatar">JD</div>
+            <div class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Free Plan</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <h1 class="page-heading">Profile Settings</h1>
+          <p class="page-subheading">Manage your account settings and preferences.</p>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="profile-section">
+          <div class="profile-card">
+            <!-- Avatar Section -->
+            <div class="profile-avatar-section">
+              <div class="profile-avatar-large">JD</div>
+              <div class="profile-name">John Doe</div>
+              <div class="profile-email">john.doe@example.com</div>
+              <button class="btn btn-secondary mt-4 input-premium">
+                <i class="fa-solid fa-camera"></i>
+                Change Photo
+              </button>
+            </div>
+
+            <!-- Form -->
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" value="John Doe">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" value="john.doe@example.com" disabled>
+              <p class="text-xs text-gray-500 mt-2">
+                <i class="fa-solid fa-lock"></i>
+                Email cannot be changed. Contact support if you need to update.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Business Name</label>
+              <input type="text" class="form-input" value="Doe's Digital Agency">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Preferred Language</label>
+              <div class="select-wrapper">
+                <select class="select-field">
+                  <option value="english" selected>English</option>
+                  <option value="hindi">Hindi</option>
+                  <option value="hinglish">Hinglish</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Save Button -->
+            <div class="mt-8 p-premium">
+              <button class="btn btn-primary btn-full btn-large input-premium" onclick="saveProfile()">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Section -->
+        <div class="section-card mt-6 p-premium card-premium rounded-premium">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Security</h2>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--bg-tertiary); border-radius: 12px;">
+              <div>
+                <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Password</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Last changed 30 days ago</div>
+              </div>
+              <button class="btn btn-secondary" style="height: 40px;">
+                <i class="fa-solid fa-key"></i>
+                Change Password
+              </button>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--bg-tertiary); border-radius: 12px;">
+              <div>
+                <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Two-Factor Authentication</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Add an extra layer of security</div>
+              </div>
+              <button class="btn btn-secondary" style="height: 40px;">
+                <i class="fa-solid fa-shield-halved"></i>
+                Enable
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Danger Zone -->
+        <div class="section-card mt-6 p-premium card-premium rounded-premium border-red-200/50">
+          <div class="section-card-header">
+            <h2 class="section-card-title" style="color: var(--error);">Danger Zone</h2>
+          </div>
+          
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; background: rgba(239, 68, 68, 0.1); border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.3);">
+            <div>
+              <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">Delete Account</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Permanently delete your account and all data</div>
+            </div>
+            <button class="btn" style="height: 40px; background: rgba(239, 68, 68, 0.2); border: 1px solid var(--error); color: var(--error);">
+              <i class="fa-solid fa-trash"></i>
+              Delete Account
+            </button>
+          </div>
+        </div>
+
+        <!-- Logout -->
+        <div class="text-center mt-12 pt-6 border-t border-gray-200/50 p-premium">
+          <a href="../index.html" class="btn btn-secondary btn-large" style="color: var(--error); border-color: rgba(239, 68, 68, 0.3);">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    // Save profile function
+    function saveProfile() {
+      // Show success message
+      const btn = event.target;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Saved!';
+      btn.style.background = 'linear-gradient(135deg, #10B981 0%, #34D399 100%)';
+      
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+      }, 2000);
+    }
+  </script>
+  <script>
+    // Check authentication
+    function checkAuth() {
+      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      if (!user || !token) {
+        window.location.href = '../login.html';
+        return null;
+      }
+      return JSON.parse(user);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      
+      // Existing scripts continue here...
+    });
+  </script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/app.js"></script>
+
+</body>
+</html>
+

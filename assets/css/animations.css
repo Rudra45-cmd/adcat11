@@ -1,0 +1,116 @@
+/* Premium Animations for AdCat - GPU Optimized */
+
+/* Global Performance */
+* {
+  will-change: transform, opacity;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  .animate-* { animation: none !important; }
+}
+
+/* Subtle Parallax */
+@keyframes parallaxMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+.parallax-hero { animation: parallaxMove 20s ease-in-out infinite; }
+
+/* Clean Typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: #3b82f6; }
+}
+.typing-headline {
+  border-right: 2px solid #3b82f6;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40) forwards, blink 0.75s infinite;
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(99, 102, 241, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.3), 0 0 10px rgba(99, 102, 241, 0.3); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.95); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Animation Classes */
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-glowPulse { animation: glowPulse 2s ease-in-out infinite; }
+.animate-shimmer { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+.animate-gradientShift { background-size: 200% 100%; animation: gradientShift 2s linear infinite; }
+.animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-scaleIn { animation: scaleIn 0.4s ease-out forwards; }
+
+/* Stagger */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Hover Effects */
+.hover-lift:hover { transform: translateY(-4px) scale(1.02); }
+.hover-scale:hover { transform: scale(1.02); }
+.glow-hover:hover { filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.3)); }
+
+/* Glass Effect */
+.glass-effect { 
+  background: rgba(255, 255, 255, 0.75); 
+  backdrop-filter: blur(20px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+/* Pulse Ring for Play Buttons */
+.pulse-ring {
+  position: relative;
+}
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: conic-gradient(transparent, rgba(255,255,255,0.4), transparent);
+  border-radius: 50%;
+  animation: pulseRing 2s infinite;
+  transform: translate(-50%, -50%);
+}

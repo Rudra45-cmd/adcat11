@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review - AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-logo">
+          <img class="logo-img" src="../assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat logo" />
+          <span class="logo-text">AdCat</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="create-ad.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Create Ad</span>
+        </a>
+        <a href="projects.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <div class="sidebar-nav-label">Account</div>
+        <a href="credits.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-coins"></i>
+          <span>Credits</span>
+        </a>
+        <a href="pricing.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-tag"></i>
+          <span>Pricing</span>
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-nav-item logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div class="navbar-left">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="page-title">Product Review</h1>
+        </div>
+        <div class="navbar-right">
+          <div class="credits-badge-nav">
+            <i class="fa-solid fa-coins"></i>
+            <span>2,450 Credits</span>
+          </div>
+          <button class="notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-badge"></span>
+          </button>
+          <div class="user-menu">
+            <div class="user-avatar">JD</div>
+            <div class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Free Plan</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <h1 class="page-heading">Review Product Info</h1>
+          <p class="page-subheading">AI has extracted the following information from your product. You can edit if needed.</p>
+        </div>
+
+        <!-- Product Info Form -->
+        <div class="form-section">
+          <div class="form-card">
+            <div class="form-group">
+              <label class="form-label">Product Title</label>
+              <input type="text" class="form-input" value="Premium Wireless Headphones - Bluetooth 5.0">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Product Description</label>
+              <textarea class="form-input" style="min-height: 120px; padding: 16px; resize: vertical;">Experience crystal-clear sound with our premium wireless headphones. Features active noise cancellation, 30-hour battery life, and premium comfort ear cushions. Perfect for music lovers and professionals.</textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Selection -->
+        <div class="section-card" style="margin-top: 24px;">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Select Images</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Select up to 3 images</span>
+          </div>
+          
+          <!-- Extracted Images -->
+          <div style="margin-bottom: 24px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Extracted Images</div>
+            <div class="image-grid">
+              <div class="image-select-item selected">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Product 1">
+              </div>
+              <div class="image-select-item selected">
+                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=200&h=200&fit=crop" alt="Product 2">
+              </div>
+              <div class="image-select-item">
+                <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=200&h=200&fit=crop" alt="Product 3">
+              </div>
+              <div class="image-select-item">
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=200&h=200&fit=crop" alt="Product 4">
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Additional -->
+          <div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Upload Additional Images</div>
+            <div class="upload-area" style="border: 2px dashed var(--gold-border); border-radius: 12px; padding: 32px; text-align: center; cursor: pointer; transition: all 0.25s ease;">
+              <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; color: var(--accent-primary); margin-bottom: 12px;"></i>
+              <div style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 4px;">Drag & drop or click to upload</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;">PNG, JPG up to 10MB</div>
+            </div>
+          </div>
+
+          <!-- Logo Upload -->
+          <div style="margin-top: 24px;">
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Brand Logo (Optional)</div>
+            <div class="upload-area" style="border: 2px dashed var(--gold-border); border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.25s ease;">
+              <i class="fa-solid fa-image" style="font-size: 1.5rem; color: var(--accent-primary); margin-bottom: 8px;"></i>
+              <div style="color: var(--text-secondary); font-size: 0.9rem;">Upload your brand logo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 16px; margin-top: 32px;">
+          <a href="create-ad.html" class="btn btn-secondary btn-large">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back
+          </a>
+          <a href="choose-ad-type.html" class="btn btn-primary btn-large" style="flex: 1;">
+            Continue to Ad Creation
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Check authentication
+    function checkAuth() {
+      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      if (!user || !token) {
+        window.location.href = '../login.html';
+        return null;
+      }
+      return JSON.parse(user);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+
+      // Image selection
+      const imageItems = document.querySelectorAll('.image-select-item');
+      let selectedCount = 2;
+
+      imageItems.forEach(item => {
+        item.addEventListener('click', () => {
+          if (item.classList.contains('selected')) {
+            if (selectedCount > 0) {
+              item.classList.remove('selected');
+              selectedCount--;
+            }
+          } else {
+            if (selectedCount < 3) {
+              item.classList.add('selected');
+              selectedCount++;
+            }
+          }
+        });
+      });
+    });
+  </script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
+

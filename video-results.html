@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Results - AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-logo">
+          <img class="logo-img" src="../assets/img/ADCAT_logo_with_stylized_cat_icon-removebg-preview.png" alt="AdCat logo" />
+          <span class="logo-text">AdCat</span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="create-ad.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Create Ad</span>
+        </a>
+        <a href="projects.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <div class="sidebar-nav-label">Account</div>
+        <a href="credits.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-coins"></i>
+          <span>Credits</span>
+        </a>
+        <a href="pricing.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-tag"></i>
+          <span>Pricing</span>
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-nav-item logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div class="navbar-left">
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h1 class="page-title">Generated Video</h1>
+        </div>
+        <div class="navbar-right">
+          <div class="credits-badge-nav">
+            <i class="fa-solid fa-coins"></i>
+            <span>2,450 Credits</span>
+          </div>
+          <button class="notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-badge"></span>
+          </button>
+          <div class="user-menu">
+            <div class="user-avatar">JD</div>
+            <div class="user-info">
+              <span class="user-name">John Doe</span>
+              <span class="user-role">Free Plan</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <h1 class="page-heading">Your Video Ad is Ready! 🎬</h1>
+              <p class="page-subheading">Your AI-generated video ad is ready for download.</p>
+            </div>
+            <a href="create-ad.html" class="btn btn-primary">
+              <i class="fa-solid fa-plus"></i>
+              Create Another
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Player -->
+        <div class="video-container">
+          <div class="video-player-wrapper">
+            <!-- Placeholder for video -->
+            <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=700&fit=crop" alt="Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+              <div class="video-overlay" id="videoOverlay">
+                <div class="play-btn">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Controls -->
+          <div class="video-controls-bar">
+            <button class="video-control-btn" id="playPauseBtn">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="video-control-btn">
+              <i class="fa-solid fa-download"></i>
+            </button>
+            <button class="video-control-btn">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+            <button class="video-control-btn">
+              <i class="fa-solid fa-share-nodes"></i>
+            </button>
+          </div>
+          
+          <div class="video-hint">
+            <i class="fa-solid fa-circle-info"></i>
+            Best for Instagram Reels & Ads (9:16 aspect ratio)
+          </div>
+        </div>
+
+        <!-- Caption Section -->
+        <div class="section-card" style="max-width: 600px; margin: 32px auto 0;">
+          <div class="section-card-header">
+            <h2 class="section-card-title">Video Caption</h2>
+          </div>
+          <div class="caption-box">
+            <div class="caption-label">Marketing Copy</div>
+            <p class="caption-text">
+              🎧 Experience Pure Sound Perfection! 
+              
+              Premium wireless headphones with active noise cancellation. 
+              
+              🔥 Limited time offer - Shop now! 🔥
+              
+              #PremiumAudio #WirelessHeadphones #MusicLovers
+            </p>
+          </div>
+          <button class="btn btn-secondary" style="margin-top: 16px;" onclick="copyCaption()">
+            <i class="fa-regular fa-copy"></i>
+            Copy Caption
+          </button>
+        </div>
+
+        <!-- Additional Actions -->
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="dashboard.html" class="btn btn-primary btn-large">
+            <i class="fa-solid fa-house"></i>
+            Go to Dashboard
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    // Video play/pause toggle
+    const videoOverlay = document.getElementById('videoOverlay');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    let isPlaying = false;
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        videoOverlay.innerHTML = '<div class="play-btn"><i class="fa-solid fa-pause"></i></div>';
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+      } else {
+        videoOverlay.innerHTML = '<div class="play-btn"><i class="fa-solid fa-play"></i></div>';
+        playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+      }
+    }
+
+    videoOverlay.addEventListener('click', togglePlay);
+    playPauseBtn.addEventListener('click', togglePlay);
+
+    // Copy caption function
+    function copyCaption() {
+      const captionText = document.querySelector('.caption-text').innerText;
+      navigator.clipboard.writeText(captionText).then(() => {
+        alert('Caption copied to clipboard!');
+      });
+    }
+  </script>
+  <script>
+    // Check authentication
+    function checkAuth() {
+      const user = localStorage.getItem('user');
+      const token = localStorage.getItem('token');
+      if (!user || !token) {
+        window.location.href = '../login.html';
+        return null;
+      }
+      return JSON.parse(user);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      
+      // Existing scripts continue here...
+    });
+  </script>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/app.js"></script>
+
+</body>
+</html>
+
