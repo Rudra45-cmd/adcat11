@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="intro-loader">
+      <div class="gate gate-left"></div>
+      <div class="gate gate-right"></div>
+      <div class="light"></div>
+      <div class="intro-content">
+        <h1 class="logo-text">AdCat</h1>
+        <p class="tagline">AI Powered Ads</p>
+      </div>
+    </div>
+
     <div class="bg-layer" aria-hidden="true">
       <span class="blob blob-blue"></span>
       <span class="blob blob-indigo"></span>
@@ -23,8 +33,15 @@
       </nav>
     </header>
 
+    <div id="loading-overlay">
+      <div class="loader">
+        <div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div>
+      </div>
+      <p>Generating with AI...</p>
+    </div>
+
     <main>
-      <section class="container section hero fade-in">
+      <section class="container section hero hero-bg fade-in">
         <article class="hero-glass">
           <div class="hero-grid">
             <div>
