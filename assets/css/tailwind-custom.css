@@ -265,6 +265,124 @@
   transition: all 0.3s ease;
 }
 
+/* Kling-style clean UI overrides */
+body {
+  background: #ffffff;
+}
+
+.hero-bg {
+  background: radial-gradient(circle at top, #eef2ff, #ffffff);
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero-glass {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: none;
+}
+
+.hero h1,
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #111827;
+  text-shadow: none;
+}
+
+.hero-highlight,
+.gradient-text {
+  color: #2563eb;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.hero p,
+.hero-subtext {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.card-clean,
+.card,
+.card-premium {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary,
+.btn-gradient {
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-gradient:hover {
+  background: #1d4ed8;
+}
+
+.bg-layer,
+.blob,
+.floating-blob,
+.blob-float {
+  display: none !important;
+}
+
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.loader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  background: #2563eb;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .auth-input:focus {
   outline: none;
   border-color: #8b5cf6;
@@ -330,8 +448,70 @@
     transform: translateX(0);
   }
 }
-</xai:function_call > 
+#intro-loader {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+  z-index: 10000;
+  overflow: hidden;
+  opacity: 1;
+  will-change: opacity;
+}
 
-<edit_file>
-<parameter name="path">/workspaces/adcat11/TODO-login.md
+.gate {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #020617;
+  transition: transform 1.2s ease;
+  will-change: transform;
+}
 
+.gate-left { left: 0; }
+.gate-right { right: 0; }
+
+.light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, #3b82f6, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 1s ease, height 1s ease, opacity 1s ease;
+  will-change: width, height, opacity;
+}
+
+.intro-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 48px;
+  color: #f9fafb;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin-top: 8px;
+  color: #9ca3af;
+}
+
+#intro-loader.active .gate-left { transform: translateX(-100%); }
+#intro-loader.active .gate-right { transform: translateX(100%); }
+#intro-loader.active .light {
+  width: 400px;
+  height: 400px;
+  opacity: 0.6;
+}
+#intro-loader.active .intro-content { opacity: 1; }

@@ -180,7 +180,11 @@
     }
   </style>
 </head>
-<body>
+<body class="fade-in">
+  <div id="loading-overlay">
+    <div class="loader"><div class="loader-dot"></div><div class="loader-dot"></div><div class="loader-dot"></div></div>
+    <p>Generating with AI...</p>
+  </div>
   <div class="page-shell">
     <section class="preview-card">
       <div class="preview-content">
@@ -218,6 +222,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.showLoader) window.showLoader();
+      setTimeout(() => window.hideLoader && window.hideLoader(), 900);
       checkAuth();
       
       // Existing scripts continue here...
@@ -228,5 +234,6 @@
   <script src="../assets/js/components.js"></script>
   <script src="../assets/js/app.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
