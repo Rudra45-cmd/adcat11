@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create Account — AdCat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-root">
+    <div class="auth-card" role="region" aria-labelledby="auth-heading-signup">
+      <div class="auth-brand">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="36" height="36" rx="8" fill="none" stroke="#D4AF37" stroke-width="1.6" />
+            <path d="M14 30 L22 18 L30 30" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1 id="auth-heading-signup">Create Your AdCat Account</h1>
+          <p class="muted">Secure, intelligent marketing automation for premium brands.</p>
+        </div>
+      </div>
+
+      <form class="auth-form" id="signup-form" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <div class="field-meta" aria-live="polite"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="email-signup">Email</label>
+          <input id="email-signup" name="email" type="email" inputmode="email" autocomplete="email" required>
+          <div class="field-meta" aria-live="polite"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="password-signup">Password</label>
+          <input id="password-signup" name="password" type="password" autocomplete="new-password" minlength="8" required>
+          <div class="field-meta" aria-live="polite"></div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-gold-filled btn-luxury-gold btn-auth" type="submit">Create Account</button>
+        </div>
+
+        <div class="form-footer">
+          <span class="muted">Already have an account?</span>
+          <a href="login.html" class="link-soft">Sign In</a>
+        </div>
+      </form>
+
+      <p class="auth-note muted">By creating an account you agree to our <a href="#" class="link-soft">Terms</a> and <a href="#" class="link-soft">Privacy</a>.</p>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js" defer></script>
+  <script src="assets/js/auth-ui.js" defer></script>
+</body>
+</html>
